@@ -1,0 +1,150 @@
+[
+    {
+        "Installation": [
+            {
+                "type": "textBlock",
+                "content": "To get started with the HASS Pathways Project, you need to install React, NextJS, and TypeScript. Luckily, we can get all of those things directly by installing NodeJS, the underlying dependency. If you're unfamiliar with what NodeJS is, we highly recommend reading below, otherwise, you may skip directly to the install instructions."
+            },
+            {
+                "type": "subsectionBlock",
+                "content": "What is Node.js?"
+            },
+            {
+                "type": "textBlock",
+                "content": "JavaScript is made to be run in a browser environment. This means we don't have access to a system's filesystem, among other things, like a general purpose language such as Python or Java does. This is where Node.js comes in. Node.js allows developers to create back-end applications using just JavaScript by providing an open source server environment hosted on the user's system. That may sound like a lot, but think of Node.js as just JavaScript running on your computer, instead of your browser. This allows development teams to write Full Stack Applications (Front End, Back End, and more) using only JavaScript. This also benefits us as Node.js is blazing fast, faster than Python and even faster than Java. This matters to developers (us) looking to scale up their projects in the future (HASS Pathways Project)."
+            },
+            {
+                "type": "subsectionBlock",
+                "content": "What is React.js?"
+            },
+            {
+                "type": "textBlock",
+                "content": "React.js, or more commonly just called React, is a front end JavaScript Library that allows you to build user interfaces out of individual pieces called components. It was developed by Meta (Facebook) in 2013 to introduce more responsive and dynamic user interfaces while still being fast and highly performant for Facebook users. Jordan Walke created React to simplify the development process by providing a more organized and structured way of building dynamic and interactive user interfaces quickly using components, then was first implemented in Facebook Newsfeed. Now that the history is out of the way - what does this all mean? Basically, React allows us to split our JS app into components, which can be functions or objects (Functional vs Class-Component React), and put them together wherever we see fit to form a full application (think building modularly). This allows us to build applications safer and faster, as well as add to them quickly in the future. React also speeds up data driven applications by providing what's called a Virtual DOM, figuring out the least expensive way to patch the actual DOM each update without rendering the actual DOM again, among other things. For the sake of keeping this as short as I can, React makes coding in JS more fun, intuitive, and fast. Click the link to start Learning React:"
+            },
+            {
+                "type": "linkBlock",
+                "content": "https://react.dev/"
+            },
+            {
+                "type": "subsectionBlock",
+                "content": "What is Next.js?"
+            },
+            {
+                "type": "textBlock",
+                "content": "When JS renders, it uses the user's browser to render. Next.js makes this faster by performing server-side rendering. What this means is Next.js can take a user's web request and generate the rendered page for that user and send it to them. This improves loading times and helps with SEO! Next.js also offers a lot of backend tooling to help you create APIs using React/Node, helping you handle server-side logic and fetching data from external sources. Next.js also comes with a bunch of other features to help React applications run, such as environment variables, automatic code splitting, and hot module replacement. To keep thing simple, we're using Next.js to build an API using its routing feature on our backend (so if you ping /course/search with a GET request, you get data! Next.js is routing your call to the correct function in our React app)."
+            },
+            {
+                "type": "subsectionBlock",
+                "content": "What is TypeScript?"
+            },
+            {
+                "type": "textBlock",
+                "content": "TypeScript is a strongly-typed programming language. It is a superset of JavaScript, aiming to give you better tooling at any scale application. TypeScript adds additional syntax to JavaScript to make your programs safer, catching errors early on directly in your compiler and even in your editor. An example of this is when you write JavaScript that has a semantic error (say you use a type for something you're not supposed to), your DOM goes blank, and sometimes you don't even have an error. TypeScript solves this problem by providing you verbose error checking, as well as static typing. When you declare a variable in TypeScript, you must declare a type if one cannot be inferred. TypeScript uses your types to check for errors and help you be a better JS programmer. Also, it comes with a lot of new data types that provide safe and fast shortcuts during your JS programming. TypeScript was developed by Microsoft in 2012 and can run anywhere JavaScript can run (hence everything so far has said JavaScript, you could substitute TypeScript and it would work just fine). Picking up TypeScript is incredibly easy if you already know JavaScript and are familiar with a strongly typed language (like C++). Fun fact: TypeScript is compiled directly into JavaScript under the hood, which is then interpreted. This makes it semi-compiled like Lua, Java, and C#. Click the link to learn more about TypeScript:"
+            },
+            {
+                "type": "linkBlock",
+                "content": "https://typescriptlang.org/"
+            },
+            {
+                "type": "subsectionBlock",
+                "content": "With all that out of the way..."
+            },
+            {
+                "type": "installBlock",
+                "content": "https://github.com/Phon1209/HassPathwaysV2.0/"
+            },
+            {
+                "type": "codeBlock",
+                "content": "git clone https://github.com/Phon1209/HassPathwaysV2.0.git"
+            },
+            {
+                "type": "textBlock",
+                "content": "Navigate to the cloned repo's directory on your system:"
+            },
+            {
+                "type": "codeBlock",
+                "content": "cd HassPathwaysV2.0"
+            },
+            {
+                "type": "textBlock",
+                "content": "Use npm to install the project dependencies (this will install React, Next, and TypeScript all in one command by reading our package.json):"
+            },
+            {
+                "type": "codeBlock",
+                "content": "npm i"
+            },
+            {
+                "type": "textBlock",
+                "content": "Now, start the web application on your local system by running:"
+            },
+            {
+                "type": "codeBlock",
+                "content": "npm run start"
+            },
+            {
+                "type": "textBlock",
+                "content": "In order to better understand the project, here's a diagram "               
+            }
+        ]
+    },
+    {        
+        "Project Structure": [
+            {
+                "type": "textBlock",
+                "content": "An API outline can be found on the GitHub:"
+            },
+            {
+                "type": "linkBlock",
+                "content": "https://github.com/Phon1209/HassPathwaysV2.0/tree/master/app/api"
+            },
+            {
+                "type": "subsectionBlock",
+                "content": "What is an API?"
+            },
+            {
+                "type": "textBlock",
+                "content": "When you hear us say 'API', we're referring to what's called an Application Programming Interface. This is a type of interface who's job is to route you to the correct function or code block in the application. Sound familiar? That's right, this is exactly one of the reasons we use Next.js. Another example of a framework that can accomplish this is Express.js or Feather.js. The routes you see on our page correspond to real functions in our React TypeScript code (look in the 'app' directory). Our Front End (the rest of the application, or the 'view') will send queries to this API by sending a HTTP request to the endpoint (https://<address>.com/<endpoint>). This is how our Front End gets it's information. Our backend (the API) queries the Quatalog, a course catalog for RPI developed by the QuACS team."
+            },
+            {
+                "type": "subsectionBlock",
+                "content": "Front End? Back End? One React Application?"
+            },
+            {
+                "type": "textBlock",
+                "content": "That may sound confusing, but it is true. We have one application: The HASS Pathways Project. This project is split into two parts: The Front End, and the Back End. We briefly described these above, but the Front End is what the user sees. It is what they interact with and it is the 'pretty part' of the application. See above again (What is React?) to get a description about how we use React to develop this. The Front End get all of it's data (the info about courses, user info, etc.) from the Back End. This is our Next.js API we described above. This part of the application manages data processing and does the heavy lifting to package, deliver, and manage data sent back to the Front End. This is where you usually see Java, C++, Python, and C# enter the Stack for some applications (stack meaning technologies used in project development)."
+            },
+            {
+                "type": "subsectionBlock",
+                "content": "What is REST and RESTful?"
+            },
+            {
+                "type": "textBlock",
+                "content": "REST stands for REpresentational State Transfer. In short, it is an architectural style that was created to guide the design and development of the World Wide Web (www). RESTful just means an implemented API that adhears to the REST principles. I do recommend looking into REST criteria, it describes how to build an API using HTTP for the World Wide Web, though for now all you must now is when you hear someone 'using REST APIs,' they are referring to sending a HTTP request to a RESTful API using the REST format. An alternative to REST would be a prescribed protocol like SOAP (Simple Object Access Protocol)."
+            }
+        ]
+    },
+    {        
+        "Project Hosting": [
+            {
+                "type": "textBlock",
+                "content": "Let's keep this short - for you, project CI/CD is setup already. Anything that is merged into the master branch will appear on the live website (this is known as a production level branch). To give a bit about project hosting: there's a lot of money involved in application hosting (think AWS, Azure, Google Cloud). These services are used, among other things, to deploy applications all the way down to an index HTML file on your system all the way up to the entirety of Netflix. Since we are a small project (in the grand scheme of things, large projects would be things like Notion, Figma, <insert any large application or service here>...), we can take advantage of free hosting options. There is a whole career to be made just in application deployment/delivery and the processes internal to it (known as Development Operations, or more commonly DevOps). The HASS Pathways Project uses Netlify, a remote-first deployment platform. We do this not only becuase Netlify is easy to use and integrate, but also because it is free for projects like us! Netlify also has a domain registry, which we use to pay for the hasspathways.com name. The site you're reading this on is hosted on Azure, using the Azure Static Web App Service. If you're interested in learning industry skills such as Kubernetes, Microservices, and Serverless backends, use some time to do so! But, for this project, you will just need to know we're on Netlify and you'll rarely have to touch the Netlify deployment."
+            }
+        ]
+    },
+    {        
+        "Project Design": [
+            {
+                "type": "textBlock",
+                "content": "We have our design principles and prototypes implemented in Figma. You will need to request access from Mike or Bram. Follow this to the best of your ability when implementing new pages to the new HASS Pathways Project."
+            }
+        ]
+    },
+    {        
+        "And you're done!": [
+            {
+                "type": "textBlock",
+                "content": "Congratulations! You are now a HASS Pathways developer. Try to commit to your own Branch for development, we will handle merging your changes into master on the Project Management side after testing. We're excited to see what you create, and encourage you to bring new ideas to the table!"
+            }
+        ]
+    }
+]
