@@ -51,11 +51,11 @@
             },
             {
                 "type": "installBlock",
-                "content": "https://github.com/Phon1209/HassPathwaysV2.0/"
+                "content": "https://github.com/anderm18/HassPathwaysV2.0/"
             },
             {
                 "type": "codeBlock",
-                "content": "git clone https://github.com/Phon1209/HassPathwaysV2.0.git"
+                "content": "git clone https://github.com/anderm18/HassPathwaysV2.0.git"
             },
             {
                 "type": "textBlock",
@@ -91,7 +91,7 @@
             },
             {
                 "type": "linkBlock",
-                "content": "https://github.com/Phon1209/HassPathwaysV2.0/tree/master/app/api"
+                "content": "https://github.com/anderm18/HassPathwaysV2.0/tree/master/app/api"
             },
             {
                 "type": "subsectionBlock",
